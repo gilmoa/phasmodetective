@@ -1,0 +1,23 @@
+.proofItem {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+
+  border-top: 1px solid var(--color-grey);
+
+  &:last-child {
+    border-bottom: 1px solid var(--color-grey);
+  }
+
+  &:hover {
+    background-color: var(--color-grey-30);
+  }
+
+  b {
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: capitalize;
+  }
+}

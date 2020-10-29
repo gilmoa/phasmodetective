@@ -1,0 +1,8 @@
+.layout {
+  max-width: 48em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: var(--color-white);
+}

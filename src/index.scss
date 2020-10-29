@@ -3,6 +3,8 @@
 :root {
   --color-black: rgb(36, 36, 36);
   --color-white: rgb(255, 255, 255);
+  --color-grey: rgb(90, 83, 90);
+  --color-grey-30: rgba(90, 83, 90, 0.5)
 }
 
 body {
@@ -14,9 +16,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: var(--color-black);
+  background-color: var(--color-black);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,
+h2 {
+  line-height: 1.15em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

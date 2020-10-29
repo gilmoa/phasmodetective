@@ -1,22 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
 import Switch from "react-switch";
 
-const Proof = ({ id, name }) => {
-  const [isProof, setIsProof] = useState(false);
-  const [notProof, setNotProof] = useState(false);
+import { proofItem } from "./Proof.module.scss";
+
+const Proof = ({ name, icon, proof, setProof }) => {
+  let notProof = proof === false;
+  let isProof = proof === true;
+
+  const changeProof = () => {
+    let x = null;
+    if (notProof) x = false;
+    if (isProof) x = true;
+    setProof(x);
+  };
 
   const toggleNotProof = () => {
-    setNotProof(!notProof);
-    if (isProof) toggleIsProof();
+    notProof = !notProof;
+    if (isProof) isProof = false;
+    changeProof();
   };
+
   const toggleIsProof = () => {
-    setIsProof(!isProof);
-    if (notProof) toggleNotProof();
+    isProof = !isProof;
+    if (notProof) notProof = false;
+    changeProof();
   };
 
   return (
-    <li key={id}>
-      <b>{name}</b>
+    <li className={proofItem}>
+      <b>
+        {icon} {name}
+      </b>
       <Switch onChange={toggleNotProof} checked={notProof} onColor="#800" />
       <Switch onChange={toggleIsProof} checked={isProof} />
     </li>

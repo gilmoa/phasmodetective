@@ -1,11 +1,17 @@
 import React from "react";
 
-const Ghost = ({ id, name, proofs }) => {
+import { ghost } from "./Ghost.module.scss";
+
+const Ghost = ({ name, proofs, proof }) => {
   return (
-    <li>
-      <b>{name}</b>
-      {Object.keys(proofs).map((key) => {
-        return proofs[key] ? <p>{key}</p> : "";
+    <li className={ghost}>
+      <h2>{name}</h2>
+      {Object.keys(proofs).map((key, id) => {
+        return proofs[key] && proof[key] !== proofs[key] ? (
+          <p key={id}>{key}</p>
+        ) : (
+          ""
+        );
       })}
     </li>
   );

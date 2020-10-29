@@ -1,0 +1,17 @@
+.ghostslist {
+  color: var(--color-white);
+  background-color: var(--color-grey);
+
+  flex: 1;
+
+  h1 {
+    padding: 0.5em 1em;
+  }
+
+  ul {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    padding: 1em;
+  }
+}

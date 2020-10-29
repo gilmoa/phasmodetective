@@ -2,6 +2,9 @@ import React from "react";
 
 import Ghost from "./Ghost";
 
+import { ghostslist } from "./GhostsList.module.scss";
+
+// TODO: switch proof > proofs > checks
 const ghosts = [
   {
     name: "spirit",
@@ -137,12 +140,35 @@ const ghosts = [
   },
 ];
 
-const GhostsList = () => {
+const GhostsList = ({ proof }) => {
   return (
-    <section>
+    <section className={ghostslist}>
+      <h1>👻 Ghosts</h1>
       <ul>
         {ghosts.map(({ name, proofs }, id) => {
-          return <Ghost id={id} name={name} proofs={proofs} />;
+          let hide = false;
+          Object.keys(proof).forEach((key) => {
+            if (proof[key] === true || proof[key] === false) {
+              console.info(
+                `${name} [${key}] => '${proof[key]}' !== ${proofs[key]}`
+              );
+              if (proof[key] !== proofs[key]) {
+                hide = true;
+              }
+              console.warn(`${name} hide: ${hide}`);
+            }
+          });
+          return hide ? (
+            ""
+          ) : (
+            <Ghost
+              key={id}
+              name={name}
+              proofs={proofs}
+              proof={proof}
+              className={`ghost${hide ? " ghost-hidden" : ""}`}
+            />
+          );
         })}
       </ul>
     </section>

@@ -1,0 +1,18 @@
+.ghost {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 0.3em;
+
+  padding: 1em;
+
+  transition: all linear 2s;
+
+  h2 {
+    text-transform: capitalize;
+    margin-bottom: 0.3em;
+  }
+
+  p {
+    text-transform: capitalize;
+  }
+}
