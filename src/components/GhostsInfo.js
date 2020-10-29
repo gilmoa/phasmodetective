@@ -124,11 +124,11 @@ const GhostsInfo = [
     name: "oni",
     checks: {
       box: true,
-      prints: true,
-      writing: false,
+      prints: false,
+      writing: true,
       freeze: false,
-      emf: false,
-      orbs: true,
+      emf: true,
+      orbs: false,
     },
   },
 ];
