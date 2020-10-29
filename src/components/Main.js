@@ -5,16 +5,6 @@ import GhostsList from "./GhostsList";
 
 import { main } from "./Main.module.scss";
 
-// TODO: move this up, display name needed by ghosts
-const proofsInfo = {
-  box: { name: "box", displayName: "spirit box", icon: "🎤" },
-  prints: { name: "prints", displayName: "finger prints", icon: "🖐" },
-  writing: { name: "writing", displayName: "ghost writing", icon: "📖" },
-  freeze: { name: "freeze", displayName: "freezing", icon: "🥶" },
-  emf: { name: "emf", displayName: "EMF", icon: "📻" },
-  orbs: { name: "orbs", displayName: "ghost orbs", icon: "💫" },
-};
-
 const Main = () => {
   const [box, setBox] = useState(null);
   const [prints, setPrints] = useState(null);
@@ -43,12 +33,8 @@ const Main = () => {
 
   return (
     <main className={main}>
-      <ProofsList
-        proofs={proofs}
-        setProofs={setProofs}
-        proofsInfo={proofsInfo}
-      />
-      <GhostsList proofs={proofs} proofsInfo={proofsInfo} />
+      <ProofsList proofs={proofs} setProofs={setProofs} />
+      <GhostsList proofs={proofs} />
     </main>
   );
 };
