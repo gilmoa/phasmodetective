@@ -1,14 +1,15 @@
 import React from "react";
 
+import ProofsInfo from "./ProofsInfo";
 import { ghost } from "./Ghost.module.scss";
 
-const Ghost = ({ name, proofs, proof }) => {
+const Ghost = ({ name, checks, proofs }) => {
   return (
     <li className={ghost}>
       <h2>{name}</h2>
-      {Object.keys(proofs).map((key, id) => {
-        return proofs[key] && proof[key] !== proofs[key] ? (
-          <p key={id}>{key}</p>
+      {Object.keys(checks).map((name, id) => {
+        return checks[name] && proofs[name] !== checks[name] ? (
+          <p key={id}>{ProofsInfo[name].displayName}</p>
         ) : (
           ""
         );

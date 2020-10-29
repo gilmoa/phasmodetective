@@ -1,32 +1,24 @@
 import React from "react";
 
 import Proof from "./Proof";
+import ProofsInfo from "./ProofsInfo";
 
 import { proofslist } from "./ProofsList.module.scss";
 
-// TODO: move this up, display name needed by ghosts
-const proofs = [
-  { name: "box", displayName: "spirit box", icon: "🎤" },
-  { name: "prints", displayName: "finger prints", icon: "🖐" },
-  { name: "writing", displayName: "ghost writing", icon: "📖" },
-  { name: "freeze", displayName: "freezing", icon: "🥶" },
-  { name: "emf", displayName: "EMF", icon: "📻" },
-  { name: "orbs", displayName: "ghost orbs", icon: "💫" },
-];
-
-const ProofsList = ({ proof, setProof }) => {
+const ProofsList = ({ proofs, setProofs }) => {
   return (
     <section className={proofslist}>
       <h1>🕵️‍♀️ Proofs</h1>
       <ul>
-        {proofs.map(({ name, displayName, icon }, id) => {
+        {Object.keys(ProofsInfo).map((name, id) => {
+          let { displayName, icon } = ProofsInfo[name];
           return (
             <Proof
               key={id}
               name={displayName}
               icon={icon}
-              proof={proof[name]}
-              setProof={setProof[name]}
+              proof={proofs[name]}
+              setProof={setProofs[name]}
             />
           );
         })}

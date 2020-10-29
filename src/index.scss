@@ -3,7 +3,7 @@
 :root {
   --color-black: rgb(36, 36, 36);
   --color-white: rgb(255, 255, 255);
-  --color-grey: rgb(90, 83, 90);
+  --color-grey: rgb(90, 80, 90);
   --color-grey-30: rgba(90, 83, 90, 0.5)
 }
 
@@ -16,7 +16,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: var(--color-black);
-  background-color: var(--color-black);
+  background-color: var(--color-grey);
+
+  font-size: 12px;
 }
 
 code {
@@ -27,6 +29,14 @@ code {
 h1,
 h2 {
   line-height: 1.15em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
 }
 
 ul {
