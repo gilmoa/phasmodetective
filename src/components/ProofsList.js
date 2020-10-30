@@ -8,7 +8,7 @@ import { proofslist } from "./ProofsList.module.scss";
 const ProofsList = ({ proofs, setProofs }) => {
   return (
     <section className={proofslist}>
-      <h1>🕵️‍♀️ Proofs</h1>
+      <h1>🔎 Proofs</h1>
       <ul>
         {Object.keys(ProofsInfo).map((name, id) => {
           let { displayName, icon } = ProofsInfo[name];

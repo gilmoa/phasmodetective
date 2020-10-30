@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import Main from "./components/Main";
 
 import firebase from "firebase/app";
+import "firebase/analytics";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 firebase.initializeApp({
@@ -16,6 +17,8 @@ firebase.initializeApp({
   appId: "1:518405251228:web:fb935a4a3401dd04774d59",
   measurementId: "G-MEYR4X3JHC",
 });
+
+firebase.analytics();
 
 const App = () => {
   return (
