@@ -1,4 +1,5 @@
 import React from "react";
+import CookieConsent from "react-cookie-consent";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -11,6 +12,9 @@ const Layout = ({ children }) => {
       <Header />
       {children}
       <Footer />
+      <CookieConsent>
+        This site uses cookies to enhance the user experience.
+      </CookieConsent>
     </div>
   );
 };
