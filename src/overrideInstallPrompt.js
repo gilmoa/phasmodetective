@@ -14,9 +14,10 @@ const overrideInstallPrompt = (buttonSelector) => {
     installBtn.style.display = "block";
 
     installBtn.addEventListener("click", (e) => {
+      installBtn.style.display = "none";
       deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choice) => {
-        if (choice.outcome === "accepted") installBtn.style.display = "none";
+      deferredPrompt.userChoice.then(() => {
+        deferredPrompt = null;
       });
     });
   });
