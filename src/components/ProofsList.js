@@ -1,7 +1,7 @@
 import React from "react";
 
 import Proof from "./Proof";
-import ProofsInfo from "./ProofsInfo";
+import { ProofsInfo } from "../Infos";
 
 import { proofslist } from "./ProofsList.module.scss";
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 import Ghost from "./Ghost";
-import GhostsInfo from "./GhostsInfo";
+import { GhostsInfo } from "../Infos";
 
 import { ghostslist } from "./GhostsList.module.scss";
 

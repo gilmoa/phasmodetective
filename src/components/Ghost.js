@@ -1,6 +1,7 @@
 import React from "react";
 
-import ProofsInfo from "./ProofsInfo";
+import { ProofsInfo } from "../Infos";
+
 import { ghost } from "./Ghost.module.scss";
 
 const Ghost = ({ name, checks, proofs }) => {
