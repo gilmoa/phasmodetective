@@ -1,7 +1,7 @@
 import React from "react";
-import Switch from "react-switch";
+import CheckBox from "./CheckBox";
 
-import { proofItem } from "./Proof.module.scss";
+import { proofitem } from "./Proof.module.scss";
 
 const Proof = ({ name, icon, proof, setProof }) => {
   let notProof = proof === false;
@@ -27,12 +27,22 @@ const Proof = ({ name, icon, proof, setProof }) => {
   };
 
   return (
-    <li className={proofItem}>
+    <li className={proofitem}>
       <b>
         {icon} {name}
       </b>
-      <Switch onChange={toggleNotProof} checked={notProof} onColor="#800" />
-      <Switch onChange={toggleIsProof} checked={isProof} />
+      <CheckBox
+        onChange={toggleNotProof}
+        checked={notProof}
+        icon={"✖"}
+        color={"#800"}
+      />
+      <CheckBox
+        onChange={toggleIsProof}
+        checked={isProof}
+        icon={"✔"}
+        color={"#080"}
+      />
     </li>
   );
 };

@@ -1,0 +1,33 @@
+.checkbox {
+  position: relative;
+  cursor: pointer;
+
+  div {
+    display: flex;
+    font-size: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: inherit;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color ease 0.8s;
+    transition: color ease 0.8s;
+  }
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  input:checked~div {
+    color: white;
+  }
+}
