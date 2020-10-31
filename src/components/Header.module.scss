@@ -2,6 +2,22 @@
   background-color: var(--color-grey);
   color: var(--color-white);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
   padding: 0.8em;
+
+  h1 {
+    flex: 1;
+    text-align: center;
+  }
+
+  svg {
+    width: 2.2em;
+    padding: 0.2em;
+    background-color: var(--color-white);
+    border-radius: 0.3em;
+
+    stroke: var(--color-grey);
+  }
 }
