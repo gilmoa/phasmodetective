@@ -14,9 +14,9 @@ const Header = () => {
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <polyline points="8 17 12 21 16 17"></polyline>
         <line x1="12" y1="12" x2="12" y2="21"></line>
