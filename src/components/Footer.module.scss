@@ -7,9 +7,11 @@
 }
 
 .donate {
-  text-align: center;
+  form {
+    text-align: center;
+  }
 
   p {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }

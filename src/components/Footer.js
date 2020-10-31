@@ -11,7 +11,7 @@ const Footer = () => {
         reserved &copy;.
       </p>
       <div className={donate}>
-        <p>Please consider donating.</p>
+        <p>If you found this useful, please consider donating.</p>
         <form
           action="https://www.paypal.com/donate"
           method="post"
