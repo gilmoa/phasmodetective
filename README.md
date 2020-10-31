@@ -1,4 +1,4 @@
-# Phasmophobia
+# Phasmodetective
 Helps you identify ghosts in Phasmophobia.
 
 ### Actions
