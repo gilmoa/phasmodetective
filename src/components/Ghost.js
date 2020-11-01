@@ -1,16 +1,16 @@
 import React from "react";
 
-import { ProofsInfo } from "../Infos";
+import { EvidencesInfo } from "../Infos";
 
 import { ghost } from "./Ghost.module.scss";
 
-const Ghost = ({ name, checks, proofs }) => {
+const Ghost = ({ name, checks, evidences }) => {
   return (
     <li className={ghost}>
       <h2>{name}</h2>
       {Object.keys(checks).map((name, id) => {
-        return checks[name] && proofs[name] !== checks[name] ? (
-          <p key={id}>{ProofsInfo[name].displayName}</p>
+        return checks[name] && evidences[name] !== checks[name] ? (
+          <p key={id}>{EvidencesInfo[name].displayName}</p>
         ) : (
           ""
         );

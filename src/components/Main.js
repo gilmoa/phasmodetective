@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import ProofsList from "./ProofsList";
+import EvidencesList from "./EvidencesList";
 import GhostsList from "./GhostsList";
 
 import { main } from "./Main.module.scss";
@@ -13,7 +13,7 @@ const Main = () => {
   const [emf, setEmf] = useState(null);
   const [orbs, setOrbs] = useState(null);
 
-  const proofs = {
+  const evidences = {
     box: box,
     prints: prints,
     writing: writing,
@@ -22,7 +22,7 @@ const Main = () => {
     orbs: orbs,
   };
 
-  const setProofs = {
+  const setEvidences = {
     box: setBox,
     prints: setPrints,
     writing: setWriting,
@@ -33,8 +33,8 @@ const Main = () => {
 
   return (
     <main className={main}>
-      <ProofsList proofs={proofs} setProofs={setProofs} />
-      <GhostsList proofs={proofs} />
+      <EvidencesList evidences={evidences} setEvidences={setEvidences} />
+      <GhostsList evidences={evidences} />
     </main>
   );
 };

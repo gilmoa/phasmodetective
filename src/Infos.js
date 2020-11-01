@@ -1,4 +1,4 @@
-export const ProofsInfo = {
+export const EvidencesInfo = {
   box: { name: "box", displayName: "spirit box", icon: "🎤" },
   prints: { name: "prints", displayName: "finger prints", icon: "🖐" },
   writing: { name: "writing", displayName: "ghost writing", icon: "📖" },
@@ -143,7 +143,7 @@ export const GhostsInfo = [
 ];
 
 const PhasmophobiaInfos = {
-  ProofsInfo: ProofsInfo,
+  EvidencesInfo: EvidencesInfo,
   GhostsInfo: GhostsInfo,
 };
 
