@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
   padding: 0.8em;
 
   h1 {
@@ -17,6 +16,8 @@
     padding: 0.2em;
     background-color: var(--color-white);
     border-radius: 0.3em;
+
+    margin-left: 1em;
 
     stroke: var(--color-grey);
   }
